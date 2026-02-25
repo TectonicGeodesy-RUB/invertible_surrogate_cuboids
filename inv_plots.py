@@ -488,12 +488,14 @@ def plot_main(res_path: str):
         fig_surf = plot_surface_displacement(y_true=y_true[sample], y_inv=y_inv[sample],
                                              x_true=x_true[sample], x_inverted=x_inv[sample],
                                              external_keys=external_keys if external_keys is not None else None)
-        savepath = f'figs/{source_type}_100samples/{source_type}_figure_{sample:02d}_surf.png'
+        savepath = f'figs/{source_type}/{source_type}_figure_{sample:02d}_surf.png'
+        os.makedirs(os.path.split(savepath)[0], exist_ok=True)
         fig_surf.savefig(savepath, format='png', dpi=300, bbox_inches='tight')
 
         fig_3d = plot_cuboids(x_init=x_init[sample], x_inverted=x_inv[sample], x_true=x_true[sample],
                               external_keys=external_keys)
-        savepath = f'figs/{source_type}_100samples/{source_type}_figure_{sample:02d}_3DPlot.png'
+        savepath = f'figs/{source_type}/{source_type}_figure_{sample:02d}_3DPlot.png'
+        os.makedirs(os.path.split(savepath)[0], exist_ok=True)
         fig_3d.savefig(savepath, format='png', dpi=300, bbox_inches='tight')
 
         plt.show()

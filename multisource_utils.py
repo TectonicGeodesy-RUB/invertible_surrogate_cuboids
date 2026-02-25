@@ -15,7 +15,7 @@ from keras.utils import register_keras_serializable
 @register_keras_serializable()
 class BoundedWConstraint_MultiSource(keras.constraints.Constraint):
     """
-    Constraint for w of shape (S, 1, 12). Applies row-wise bounds like your single-source constraint.
+    Constraint for w of shape (S, 1, 12). Applies row-wise bounds.
     Parameter order: [c1,c2,c3,L,W,T,e11,e12,e13,e22,e23,e33]
     """
     def __init__(self, eps=1e-4, max_extent=1.0):

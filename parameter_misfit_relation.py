@@ -174,6 +174,6 @@ if __name__ == '__main__':
     cbar.ax.tick_params(labelsize=14)
     cbar.set_label(label='\n'+r'Misfit ($m^2)$', fontsize=16)
 
-    plt.savefig('parameter_misfit.png', format='png', dpi=300, bbox_inches='tight')
+    plt.savefig('./figs/parameter_misfit.png', format='png', dpi=300, bbox_inches='tight')
 
     plt.show()
