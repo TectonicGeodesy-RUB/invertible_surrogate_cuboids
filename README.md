@@ -1,14 +1,14 @@
-[![DOI]()]()
+[![DOI](https://zenodo.org/badge/1165868423.svg)](https://doi.org/10.5281/zenodo.18768998)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-darkred.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 # Invertible Surrogate of Anelastic Eigenstrain Cuboids Deformation Sources
 
 The paper associated with this repository is currently submitted and under review at __Geophysical Journal International__:
 
-> Kaan Çökerim and Jonathan Bedford. *One Source to Fit Them All: 
-> Versatile Surrogate Inversion of Diverse Surface Deformation Sources* (2026)
+> Kaan Çökerim and Jonathan Bedford (2026). One Source to Fit Them All: 
+> Versatile Surrogate Inversion of Diverse Surface Deformation Sources,
 >
-> A preprint version is openly available on _ESS Open Archive_ : [https://doi.org/](https://doi.org/)\
+> A preprint version is openly available on _ESS Open Archive_ : [https://doi.org/10.22541/essoar.177249026.64692223/v1](https://doi.org/10.22541/essoar.177249026.64692223/v1)\
 > If you use this codebase in your own work **please cite the preprint**.
 
 ## What this repository contains:
@@ -18,7 +18,7 @@ This repository contains a minimal example to reproduce the results presented in
 `./synthetic_data_generation/` contains scripts for sample generation:
   - `computeDisplacementVerticalShearZone.py`: modified version of
   the anelastic cuboid eigenstrain solutions originally by 
-  [Barbot et al. (2016)](https://pubs.geoscienceworld.org/ssa/bssa/article/107/2/821/354173/Displacement-and-Stress-Associated-with).
+  [Barbot et al. (2017)](https://pubs.geoscienceworld.org/ssa/bssa/article/107/2/821/354173/Displacement-and-Stress-Associated-with).
   Specifically, we vectorized the original version by changing from `sympy` to `numpy` for numerical computations and 
   providing a vectorized `acoth()` routine.
   The original version is provided [here](https://bitbucket.org/sbarbot/bssa-2016237/src/master/python/).
@@ -26,10 +26,10 @@ This repository contains a minimal example to reproduce the results presented in
   samples for surrogate training. The samples are saved in a HDF5 file. 
   **Please ensure that you have enough disk space before executing (~45 GB for 1 Mio. samples)**
   - `random_example_training_cuboids.h5` contains an example dataset of random 1024 cuboids.
-  - `random_faults_34186.mat` contains an example dataset of random 100 deformation fields from 
+  - `random_faults_34186.mat` contains an example dataset of 100 deformation fields from 
   random Okada-type dislocations generated using the numerical implementation of [Nikkhoo & Walter (2015)](https://doi.org/10.1093/gji/ggv035)
   which is available [here](https://www.volcanodeformation.com/software).
-  - `mogi_random_100.mat` contains an example dataset of random 100 deformation fields from random Mogi sources
+  - `mogi_random_100.mat` contains an example dataset of 100 deformation fields from random Mogi sources
   generated using the numerical implementation of Institut de Physique du Globe de Paris
   which is available [here](https://github.com/IPGP/deformation-lib/tree/master/mogi).
 
